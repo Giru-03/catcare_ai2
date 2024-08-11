@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/Polygon 1.png" type="image/x-icon">
     <title>CATChat</title>
     <style>
         body {
@@ -217,7 +218,7 @@
             <button onclick="addSuggestionToChat('Trouble Logging in')">Trouble Logging in</button>
             <button onclick="addSuggestionToChat('Connect Caterpillar')">Connect Caterpillar</button>
             <button onclick="addSuggestionToChat('How to use the platform?')">How to use the platform?</button>
-            <button onclick="addSuggestionToChat('Suggestions for better lifetime of machines')">Suggestions for better lifetime of machines</button>
+            <button onclick="addSuggestionToChat('Suggestions for better lifetime of machines')">Recommendations for better lifetime of machines</button>
         </div>
         
         <form id="chat-form" method="POST" >
@@ -241,12 +242,13 @@
 
         function addSuggestionToChat(message) {
             // Create the message element
-            var chatHistory = document.getElementById("chat-history");
-            var userMessage = document.createElement("div");
-            userMessage.className = "message user";
-            userMessage.innerHTML = `<div class="message-content">${message}</div>
-                                     <div class="icon user"><img src="../static/user.png" alt="User Icon"></div>`;
-            chatHistory.appendChild(userMessage);
+            //var chatHistory = document.getElementById("chat-history");
+            //var userMessage = document.createElement("div");
+            //userMessage.className = "message user";
+            //userMessage.innerHTML = `<div class="message-content">${message}</div>
+                                    // <div class="icon user"><img src="../static/user.png" alt="User Icon"></div>`;
+            //chatHistory.appendChild(userMessage);
+            document.getElementById('user-input').value = message
 
             // Scroll to the bottom of the chat
             scrollToBottom();

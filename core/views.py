@@ -221,7 +221,6 @@ responses = {
     ]
 }
 
-# Function to get chatbot response
 def get_response(user_input):
     for key, pattern in patterns.items():
         if re.search(pattern, user_input):
@@ -236,7 +235,6 @@ def chat_view(request):
         user_input = request.POST.get('message')
         bot_response = get_response(user_input)
 
-        # Save user input and bot response to session
         request.session['chat_history'].append({'user': user_input, 'bot': bot_response})
         request.session.modified = True
 
